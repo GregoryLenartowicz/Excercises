@@ -6,25 +6,51 @@
 #    Wracamy do punktu 1
 
 import time
-#imort random
+import random
 
 choice = ('h', 't')
 
-a = 'heads'
+h = 'heads'
 t = 'tails'
 
 I = 0
 bot = 0
 
-while I < 10 or bot < 6:
-    my_choice = input('Make a choice: a - heads or t - tails: ')
-    print(my_choice)
-    remaining_time = 4
+while I < 3 and bot < 3:
 
-    while remaining_time >1:
+    x = input('Make a choice: h - heads or t - tails: or "0" - to end the game ')
+    print(x)
+
+    if x == '0': break
+    elif x == 'h': x = "head"
+    elif x == 't': x = "tails"
+    else:
+        print('Tra again')
+        continue
+
+
+
+    # Random selection by bot
+    random_select_bot = random.choice(['h','t'])
+    print("bot choice:", random_select_bot)
+
+    for i in range(0, 3):
+        print(3 - i)
         time.sleep(1)
-        remaining_time -=1
-        print(remaining_time)
-    bot += 1
-    print(bot)
+
+        # adding points
+        if  x == random_select_bot:
+            I += 1
+            print("another choice")
+        else:
+            bot += 1
+            print("the same choice")
+        print(f'I scored {I} points '
+             f'bot scored {bot} points')
+
+        if bot == 3:
+            print('The winner is BOT')
+
+        elif I == 3:
+            print("I'm winner" )
 
