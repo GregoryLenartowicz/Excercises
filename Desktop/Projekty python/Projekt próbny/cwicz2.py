@@ -5,6 +5,8 @@
 #    Wyświetla wyniki
 #    Wracamy do punktu 1
 
+# Next change 11/05/2020
+
 import time
 import random
 
