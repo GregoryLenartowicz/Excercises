@@ -30,29 +30,29 @@ while I < 3 and bot < 3:
         print('Tra again')
         continue
 
-
-
     # Random selection by bot
     random_select_bot = random.choice(['h','t'])
-    print("bot choice:", random_select_bot)
 
-    for i in range(0, 3):
+    # time countdown module
+    for i in range(3):
         print(3 - i)
         time.sleep(1)
 
-        # adding points
-        if  x == random_select_bot:
-            I += 1
-            print("another choice")
-        else:
-            bot += 1
-            print("the same choice")
-        print(f'I scored {I} points '
+    print("bot choice:", random_select_bot)
+
+    # point counter
+    if  x == random_select_bot:
+        I += 1
+        print("another choice")
+    else:
+        bot += 1
+        print("the same choice")
+    print(f'I scored {I} points '
              f'bot scored {bot} points')
 
-        if bot == 3:
-            print('The winner is BOT')
+    if bot == 3:
+        print('The winner is BOT')
 
-        elif I == 3:
-            print("I'm winner" )
+    elif I == 3:
+        print("I'm winner" )
 
