@@ -1,14 +1,24 @@
-### exercise: adding items to the list
+### Eexercise: Random letter
+#!good habits!#
 
-a = [1,2,4,6,8]
-# the sum is to be equal to 7
+import random
+#random chois
+s = random.randint(97,97+25)
+letter = chr(s)
+print(letter)
 
-b = a[0]+a[3]
-print(b)
+#random letter from the generated alphabet
 
-a.append(a[len(a)-2]+a[len(a)-5])
+alphabet = []
+for i in range(97,97+26):
+    p = chr(i)
+    alphabet += p
+#    print(alphabet, end=' ')
+rand_let = random.choice(alphabet)
+print(rand_let)
 
-print(a[5])
+print(chr(97+25))
+
 
 
 
