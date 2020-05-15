@@ -3,7 +3,7 @@
 
 import random
 #random choice
-s = random.randint(97,97+25)
+s = random.randint(97,97+25)  # ascii
 letter = chr(s)
 #print(letter)
 
