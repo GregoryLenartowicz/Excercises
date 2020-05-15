@@ -26,12 +26,11 @@ print(len(q))
 print('v' in q)
 
 # drawing a square random size
-n = random.randint(4,15)
+n = random.randint(4,8)
 print(n)
-#for i in range(1,n+1):  # height (y axis)
-#    print(w*n)            # width  (x axis)
+for i in range(1,n+1):  # height (y axis)
+    print(w*n)            # width  (x axis)
 
-# drawing an empty square (in prpgress)
+# drawing an empty square
 for i in range(1,n+1):
-#    print(w, w if n<0 else '1'* (n-2),w)
-    print(w, w*(n-2) if i in (2,0) else ' '* (n-2),w)
+    print(w, w*(n-2) if i in (1,n) else ' '* (n-2),w)
