@@ -49,7 +49,7 @@ new_dict = {}
 
 # add values to for 'new_dict' using for loop (number divisible by three and 'value' multiplied by five)
 for i in nr:
-    if i%3 == 0:
+    if i == 3:
         new_dict[i] = i*5
 print(new_dict)
 
