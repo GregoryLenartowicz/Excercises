@@ -53,7 +53,7 @@ for i in nr:
         new_dict[i] = i*5
 print(new_dict)
 
-# if - comdition
+# if - condition
 
 
 
