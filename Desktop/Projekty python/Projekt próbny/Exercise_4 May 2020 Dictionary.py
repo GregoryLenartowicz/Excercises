@@ -43,17 +43,45 @@ a  = {'a': 1, 'b': 2, 'c': 3}
 at = {k:v*3 for (k,v) in a.items()}
 print(at)
 
+import time
 
-nr = range(20)
+nr = range(2000000)
 new_dict = {}
 
 # add values to for 'new_dict' using for loop (number divisible by three and 'value' multiplied by five)
+t1 = time.time()
 for i in nr:
-    if i == 3:
+    if i%3 == 0:
         new_dict[i] = i*5
-print(new_dict)
+#print(new_dict)
+t2 = time.time()
+print(f'start loop method {t1}'
+      f' finish loop method {t2} '
+      f'The time it took: {t2-t1}')
+loop_time = t2-t1
 
-# if - condition
+# 18/05/2020
+# 19/05/2020 construction of the dict method and attempt to count the speed of action
 
+# adding values using dictionary comprehension
+t3 = time.time()
+new_dict_dick = {i:i*5 for i in nr if i%3 == 0}
+#print(new_dict_dick)
+t4 = time.time()
+dict_time = t4 - t3
+print(f'start dict method {t3} finish dict method {t4} The time it took {dict_time}')
 
+# Comparsion of the speed of the task performed
+the_times_difference = None
+a = None
+b = None
 
+if loop_time > dict_time:
+    the_times_difference = loop_time - dict_time
+    a == b
+    slower = a
+else:
+    the_times_difference = dict_time - loop_time
+    faster = a
+    slower = b
+print(f'The {a} method is {the_times_difference} seconds faster then the {b} method')
