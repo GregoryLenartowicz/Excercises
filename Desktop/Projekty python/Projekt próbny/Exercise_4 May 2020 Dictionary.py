@@ -62,6 +62,7 @@ loop_time = t2-t1
 
 # 18/05/2020
 # 19/05/2020 construction of the dict method and attempt to count the speed of action
+# 20/05/2020 complete attempt to compare two methods
 
 # adding values using dictionary comprehension
 t3 = time.time()
@@ -72,16 +73,15 @@ dict_time = t4 - t3
 print(f'start dict method {t3} finish dict method {t4} The time it took {dict_time}')
 
 # Comparsion of the speed of the task performed
-the_times_difference = None
-a = None
-b = None
 
-if loop_time > dict_time:
-    the_times_difference = loop_time - dict_time
-    a == b
-    slower = a
-else:
-    the_times_difference = dict_time - loop_time
-    faster = a
-    slower = b
-print(f'The {a} method is {the_times_difference} seconds faster then the {b} method')
+a = loop_time
+b = dict_time
+
+# establishing a faster method
+c = a if a>b else b
+d = a if a<b else b
+
+# calculation of the time difference
+the_times_difference = a-b if a>b else b-a
+
+print(f'The {c} method is {the_times_difference} seconds faster then the {d} method')
