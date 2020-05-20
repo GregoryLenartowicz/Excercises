@@ -72,16 +72,22 @@ t4 = time.time()
 dict_time = t4 - t3
 print(f'start dict method {t3} finish dict method {t4} The time it took {dict_time}')
 
-# Comparsion of the speed of the task performed
-
-a = loop_time
-b = dict_time
-
-# establishing a faster method
-c = a if a>b else b
-d = a if a<b else b
+a = dict_time
+b = loop_time
 
 # calculation of the time difference
 the_times_difference = a-b if a>b else b-a
 
-print(f'The {c} method is {the_times_difference} seconds faster then the {d} method')
+# Comparsion of the speed of the task performed
+# establishing a faster method
+faster_method = a if a>b else b
+
+# statment
+if  faster_method == b:
+    print(f'The dict method {the_times_difference} seconds faster then the loop method.')
+else:
+    print(f'The loop method {the_times_difference} seconds  faster then the dict method.')
+
+
+
+
