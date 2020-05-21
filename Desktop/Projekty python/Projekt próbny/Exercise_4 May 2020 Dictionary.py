@@ -32,16 +32,16 @@ del a['jf']
 # 18/05/2020
 
 f = dict.keys(a)
-print(f)
+#print(f)
 g = dict.values(a)
-print(g)
+#print(g)
 h = dict.items(a)
-print(h)
+#print(h)
 
 # tripling each value in dict
 a  = {'a': 1, 'b': 2, 'c': 3}
 at = {k:v*3 for (k,v) in a.items()}
-print(at)
+#print(at)
 
 import time
 
@@ -55,9 +55,9 @@ for i in nr:
         new_dict[i] = i*5
 #print(new_dict)
 t2 = time.time()
-print(f'start loop method {t1}'
-      f' finish loop method {t2} '
-      f'The time it took: {t2-t1}')
+#print(f'start loop method {t1}'
+#      f' finish loop method {t2} '
+#      f'The time it took: {t2-t1}')
 loop_time = t2-t1
 
 # 18/05/2020
@@ -70,7 +70,7 @@ new_dict_dick = {i:i*5 for i in nr if i%3 == 0}
 #print(new_dict_dick)
 t4 = time.time()
 dict_time = t4 - t3
-print(f'start dict method {t3} finish dict method {t4} The time it took {dict_time}')
+#print(f'start dict method {t3} finish dict method {t4} The time it took {dict_time}')
 
 a = dict_time
 b = loop_time
@@ -83,10 +83,38 @@ the_times_difference = a-b if a>b else b-a
 faster_method = a if a>b else b
 
 # statment
-if  faster_method == b:
-    print(f'The dict method {the_times_difference} seconds faster then the loop method.')
-else:
-    print(f'The loop method {the_times_difference} seconds  faster then the dict method.')
+#if  faster_method == b:
+#    print(f'The dict method {the_times_difference} seconds faster then the loop method.')
+#else:
+#    print(f'The loop method {the_times_difference} seconds  faster then the dict method.')
+
+# 21/05/2020  continuation of dictionaries
+n = range(10)
+# sample use
+#print({i:i for i in n if i <=2 })
+#print({i:i for i in n})
+#print({i:i**2 for i in n if i%2 == 0})
+#print({i+2:i for i in n if i == 7})
+
+# material from datacamp
+# Initialize the `fahrenheit` dictionary
+fahrenheit = {'temp': 33}
+
+# Get the corresponding `celsius` values and create the new dictionary
+celsius = {k:(float(5)/9)*(v-32) for (k,v) in fahrenheit.items()}
+print(celsius)
+
+# conversion from Celsius to Fahrenheit
+celsius_change = {'temp_Change': 100}
+fahrenheit_change = {k:(v*1.8)+32 for (k,v) in celsius_change.items()}
+print(fahrenheit_change)
+
+
+
+
+
+
+
 
 
 
