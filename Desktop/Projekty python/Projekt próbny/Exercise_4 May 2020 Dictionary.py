@@ -110,10 +110,30 @@ fahrenheit_change = {k:(v*1.8)+32 for (k,v) in celsius_change.items()}
 print(fahrenheit_change)
 
 
+# 22/05/2020
+# If-Else conditions (dictionary comprehension)
+
+# identify odd and even entries
+a = {'a':1, 'b':5, 'c':20}
+print({k:('even' if v%2==0 else 'odd') for (k,v) in a.items()})
+
+# identify odd and even in keys
+#a = range(8)
+b = {i:i for i in a}
+#print(b)
+#print(b.items())
+# notice:  only one value can be assigned to a key in the dictionary!
+#print({('even' if k%2==0 else 'odd'):v for (k,v) in b.items()})
+
+# change only the indicated value
+print({k:('one' if v==1 else v) for k,v in a.items()})
 
 
-
-
+# nested dictionary comprehension
+n = {'first':{'a':1}, 'second':{'b':2}}
+float_n = {outer_k: {float(inner_v) for (inner_k, inner_v) in outer_v.items()} for
+                     (outer_k, outer_v) in n.items()}
+print(float_n)
 
 
 
